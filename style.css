@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { background: #6490c5; }
+.sketchbook { position: relative; width: 100%; min-height: 100svh; overflow: hidden; isolation: isolate; }
+.meadow { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; z-index: -1; }
+.handwriting-space { position: absolute; top: 12%; left: 10%; width: 48%; height: 32%; pointer-events: none; }
+.github { position: absolute; top: 28px; right: 30px; width: 42px; height: 42px; display: grid; place-items: center; color: #f2f4e6; opacity: .8; transition: opacity .2s; }
+.github:hover { opacity: 1; }
+svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+.works { position: absolute; right: 10%; bottom: 12%; width: clamp(185px, 25vw, 340px); }
+.work { display: block; position: relative; padding: 10px 10px 33px; background: #eee9dc; box-shadow: 2px 8px 17px #18375b30; transform: rotate(5deg); transition: transform .3s, box-shadow .3s; }
+.work > img { display: block; width: 100%; aspect-ratio: 1.5; object-fit: cover; }
+.work:hover { transform: rotate(1deg) translateY(-5px); box-shadow: 3px 15px 25px #18375b40; }
+.tape { position: absolute; width: 32%; height: 27px; left: 34%; top: -13px; background: #e5e4cead; transform: rotate(-7deg); clip-path: polygon(2% 0,98% 3%,100% 95%,0 100%); z-index: 1; }
+.open { position: absolute; right: 11px; bottom: 3px; color: #7e8e89; }
+.open svg { width: 28px; height: 23px; }
+a:focus-visible { outline: 3px dashed #fff7db; outline-offset: 9px; }
+@media (min-aspect-ratio: 19/10) { .sketchbook { min-height: 110svh; } }
+@media (max-width: 650px) {
+  .sketchbook { min-height: 100svh; }
+  .meadow { object-position: 47% center; }
+  .github { top: 18px; right: 16px; }
+  .handwriting-space { top: 13%; left: 9%; width: 70%; height: 27%; }
+  .works { right: 9%; bottom: 10%; width: clamp(165px, 44vw, 240px); }
+  .work { padding: 7px 7px 28px; transform: rotate(5deg); }
+  .tape { height: 22px; top: -10px; }
+}
+@media (prefers-reduced-motion: reduce) { .work, .github { transition: none; } }
