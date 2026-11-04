@@ -26,3 +26,9 @@ a:focus-visible { outline: 3px dashed #fff7db; outline-offset: 9px; }
   .tape { height: 22px; top: -10px; }
 }
 @media (prefers-reduced-motion: reduce) { .work, .github { transition: none; } }
+
+.works { display:flex; gap:32px; width:min(56vw,680px); align-items:center; }
+.works .work { width:calc(50% - 16px); flex-shrink:0; }
+.flower-work { transform:rotate(-5deg); }
+.flower-work:hover { transform:rotate(-1deg) translateY(-5px); }
+@media(max-width:650px){.works{width:76%;right:9%;gap:18px;bottom:10%}.works .work{width:calc(50% - 9px)}.work{padding:6px 6px 27px}.tape{height:18px;top:-9px}}
