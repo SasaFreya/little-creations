@@ -43,3 +43,9 @@
 [在线体验](https://sasafreya.github.io/little-creations/flower-letter/) · [源码](flower-letter/)
 
 Canvas 代码绘制的互动花束。点击或按 Enter / 空格，花束散成粒子并汇聚成图片，再次点击回到花束。支持替换本地照片，照片不上传、不保存，刷新后恢复荷花示例。默认示例沿用合集的 AI 荷花素材；花束本身由代码实时绘制。支持减少动态效果偏好。
+
+## 003 · 窗前清供
+
+[在线体验](https://sasafreya.github.io/little-creations/window-blooms/) · [源码](window-blooms/)
+
+以粉白菊花、细绿枝与青花瓷瓶为参考的独立互动作品。花瓣、枝叶和瓷瓶纹样全部由 SVG 代码绘制，不使用生成花卉图片。点击花朵舒展，滑动日光刻度改变光线和时刻，可开关微风。支持键盘操作与减少动态效果偏好。

@@ -32,3 +32,9 @@ a:focus-visible { outline: 3px dashed #fff7db; outline-offset: 9px; }
 .flower-work { transform:rotate(-5deg); }
 .flower-work:hover { transform:rotate(-1deg) translateY(-5px); }
 @media(max-width:650px){.works{width:76%;right:9%;gap:18px;bottom:10%}.works .work{width:calc(50% - 9px)}.work{padding:6px 6px 27px}.tape{height:18px;top:-9px}}
+
+.works { width:min(69vw,900px); gap:24px; }
+.works .work { width:calc((100% - 48px)/3); }
+.window-work { transform:rotate(3deg); }
+.window-work > img { object-position:50% 45%; }
+@media(max-width:650px){.works{width:86%;right:7%;gap:11px;bottom:10%}.works .work{width:calc((100% - 22px)/3)}.works .work{padding:4px 4px 23px}.works .open{right:5px}.works .tape{height:14px;top:-7px}}
