@@ -1,7 +1,7 @@
 const scene=document.querySelector('#scene'),NS='http://www.w3.org/2000/svg';let seed=731;function rnd(a=0,b=1){seed=(seed*1664525+1013904223)>>>0;return a+(seed/4294967296)*(b-a)}function el(tag,attrs={},parent=scene){let n=document.createElementNS(NS,tag);for(let [k,v]of Object.entries(attrs))n.setAttribute(k,v);parent.append(n);return n}const defs=el('defs');
 defs.innerHTML=`
-<linearGradient id="room" x1="0" y1="0" x2="1" y2=".7"><stop stop-color="#b5b49b"/><stop offset=".28" stop-color="#646e54"/><stop offset=".6" stop-color="#2a352a"/><stop offset="1" stop-color="#111f1d"/></linearGradient>
-<linearGradient id="table" x2="0" y2="1"><stop stop-color="#b7b6a2"/><stop offset="1" stop-color="#818776"/></linearGradient>
+<linearGradient id="room" x1="0" y1="0" x2="1" y2=".7"><stop stop-color="#2447a5"/><stop offset=".28" stop-color="#103197"/><stop offset=".6" stop-color="#08217e"/><stop offset="1" stop-color="#030e48"/></linearGradient>
+<linearGradient id="table" x2="0" y2="1"><stop stop-color="#1b3597"/><stop offset="1" stop-color="#071b70"/></linearGradient>
 <linearGradient id="porcelain"><stop stop-color="#647f7b"/><stop offset=".18" stop-color="#c0cdc1"/><stop offset=".35" stop-color="#f5f1dc"/><stop offset=".55" stop-color="#dce1cc"/><stop offset=".82" stop-color="#a6b8a8"/><stop offset="1" stop-color="#4c6a65"/></linearGradient>
 <radialGradient id="ceramicLight" cx=".25" cy=".2" r=".9"><stop stop-color="#fffde4" stop-opacity=".35"/><stop offset=".65" stop-color="#e7f2dc" stop-opacity="0"/><stop offset="1" stop-color="#203c39" stop-opacity=".32"/></radialGradient>
 <radialGradient id="sunlight"><stop stop-color="#fff1c1" stop-opacity=".18"/><stop offset="1" stop-color="#ffe5af" stop-opacity="0"/></radialGradient>
@@ -9,8 +9,8 @@ defs.innerHTML=`
 <filter id="shadow"><feGaussianBlur stdDeviation="8"/></filter>
 <clipPath id="vaseClip"><path id="vaseShape" d="M302 637 C302 658 276 672 267 704 C248 755 260 827 279 851 Q362 879 447 850 C466 798 472 745 453 704 C438 674 418 659 420 637Z"/></clipPath>`;
 el('rect',{width:720,height:900,fill:'url(#room)'});
-const distant=el('g',{filter:'url(#soft)',opacity:.35});el('path',{d:'M-30 0H110V710H-30Z',fill:'#f1e3b4'},distant);el('path',{d:'M143 -10H161V720H143Z',fill:'#393c2e'},distant);el('ellipse',{cx:585,cy:240,rx:80,ry:210,fill:'#071a16',transform:'rotate(31 585 240)'},distant);
-const windowShadow=el('g',{opacity:.13});el('path',{d:'M50 -30 85 -30 540 900 485 900Z M-100 170 -80 140 720 610 720 655Z',fill:'#101c17'},windowShadow);
+const distant=el('g',{filter:'url(#soft)',opacity:.35});el('path',{d:'M-30 0H110V710H-30Z',fill:'#94b5ff'},distant);el('path',{d:'M143 -10H161V720H143Z',fill:'#07124b'},distant);el('ellipse',{cx:585,cy:240,rx:80,ry:210,fill:'#030b3b',transform:'rotate(31 585 240)'},distant);
+const windowShadow=el('g',{opacity:.13});el('path',{d:'M50 -30 85 -30 540 900 485 900Z M-100 170 -80 140 720 610 720 655Z',fill:'#020b3c'},windowShadow);
 el('path',{d:'M0 782 720 741V900H0Z',fill:'url(#table)'});el('ellipse',{cx:405,cy:860,rx:145,ry:20,fill:'#11251f',opacity:.36,filter:'url(#shadow)'});
 const vegetation=el('g');const branches=[];
 function spray(x,y,length,angle,parent,depth=0){

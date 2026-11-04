@@ -4,3 +4,18 @@
 .art{box-shadow:0 20px 60px #3a443219}
 @media(min-width:900px){main{max-width:1200px;grid-template-columns:.8fr 1.65fr;gap:0 8%}aside{padding-top:90px}h1{font-size:55px;line-height:1.5;letter-spacing:12px}.controls{padding-bottom:20px}}
 @media(min-width:900px){.art{height:min(790px,calc(100svh - 145px));width:auto;max-width:100%;justify-self:end}aside{padding-top:30px}h1{margin:20px 0;font-size:48px}.instructions{margin-top:25px}main{grid-template-columns:.8fr 1.65fr}.controls{padding-top:10px}.actions{margin-top:20px}footer{margin-top:25px}}
+
+/* Deep Klein blue, with the illustration as the sole focal point. */
+body{background:#06166b;color:#d7dff2}
+header{color:#9baedc}header a{color:#d7dff2}
+main{display:flex;flex-direction:column;align-items:center;gap:0;padding:0 5%;max-width:1000px}
+.art{width:min(100%,510px);height:auto;max-width:100%;aspect-ratio:.8;align-self:center;background:#06166b;box-shadow:0 24px 80px #01082744}
+.controls{width:min(100%,400px);padding:30px 0 0;align-self:center}
+.light-label{color:#d5dff4}output,.scale,button span{color:#8fa5d6}
+input[type=range]{accent-color:#c1d0f2}
+button{color:#d2dcf3;border-color:#3a4f95}
+#note,footer{color:#8298ce}
+a:focus-visible,button:focus-visible,input:focus-visible{outline-color:#b4c7f4}
+footer{width:100%;max-width:1000px}
+@media(min-width:900px){main{display:flex;max-width:1000px}.art{width:auto;height:min(720px,calc(100svh - 220px));max-width:100%;justify-self:auto}.controls{padding:24px 0 0}.actions{margin-top:18px}footer{margin-top:25px}}
+@media(max-width:650px){header{height:55px}.art{width:100%;height:auto}.controls{padding:25px 4px 0}}
