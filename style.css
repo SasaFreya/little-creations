@@ -38,3 +38,10 @@ a:focus-visible { outline: 3px dashed #fff7db; outline-offset: 9px; }
 .window-work { transform:rotate(3deg); }
 .window-work > img { object-position:50% 45%; }
 @media(max-width:650px){.works{width:86%;right:7%;gap:11px;bottom:10%}.works .work{width:calc((100% - 22px)/3)}.works .work{padding:4px 4px 23px}.works .open{right:5px}.works .tape{height:14px;top:-7px}}
+
+/* Four creations keep their postcard size; small screens use two rows. */
+.works { width:min(78vw,1080px); gap:22px; }
+.works .work { width:calc((100% - 66px)/4); }
+.ballet-work { transform:rotate(-3deg); }
+.ballet-work:hover { transform:rotate(0deg) translateY(-5px); }
+@media(max-width:650px){.works{flex-wrap:wrap;width:72%;right:8%;gap:22px 16px;bottom:8%}.works .work{width:calc((100% - 16px)/2)}.handwriting-space{height:20%}}
