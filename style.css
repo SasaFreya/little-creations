@@ -62,3 +62,16 @@ a:focus-visible { outline: 3px dashed #fff7db; outline-offset: 9px; }
   .handwriting-space { height: 20%; }
   .works .work:last-child { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; }
 }
+
+/* Nine independent creations, arranged as a scrollable paper collection. */
+.sketchbook { min-height: 100svh; padding: 43svh 6% 7svh; }
+.works { position: relative; inset: auto; width: 100%; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 32px 24px; }
+.pastel-work:nth-child(even) { transform: rotate(-3deg); }
+.pastel-work:hover { transform: rotate(0) translateY(-5px); }
+@media (max-width: 1000px) { .works { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 780px) {
+  .sketchbook { padding: 34svh 8% 7svh; }
+  .works { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 18px; }
+  .works .work:last-child { grid-column: auto; width: auto; justify-self: stretch; }
+  .project-label { white-space: normal; }
+}

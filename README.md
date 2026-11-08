@@ -57,3 +57,10 @@ Canvas 代码绘制的互动花束。点击或按 Enter / 空格，花束散成�
 一个花、地毯与紫裙女孩组成的互动小舞台。包括独舞、简化四小天鹅、东方舞，以及按节拍演示的芭蕾小课堂：擦地、手臂、半蹲与半脚尖、一位二位小跳。支持中文语音提示、同步动作说明、慢速播放和按八拍回看，也可以调整舞台大小、拖动位置、切到角落布局。
 
 画面由 Canvas 代码绘制；这是二维风格化演示，组合参考与适配说明见作品内的出处卡片。浏览器本地只保存舞台设置，中文语音使用浏览器提供的声音；角落模式是网页布局。
+
+## 蓝色插画动效
+
+- [把花撑成一把伞](https://sasafreya.github.io/little-creations/flower-umbrella/) · 独立 SVG 与 CSS 动效，支持暂停、重播、鼠标倾斜与减少动态效果偏好。
+- [雨落，花开](https://sasafreya.github.io/little-creations/rain-blooms/) · 独立 SVG 与 CSS 动效，支持暂停、重播、鼠标倾斜与减少动态效果偏好。
+- [云朵有一封来信](https://sasafreya.github.io/little-creations/cloud-letter/) · 独立 SVG 与 CSS 动效，支持暂停、重播、鼠标倾斜与减少动态效果偏好。
+- [鸟把诗唱给天空](https://sasafreya.github.io/little-creations/bird-poem/) · 独立 SVG 与 CSS 动效，支持暂停、重播、鼠标倾斜与减少动态效果偏好。
