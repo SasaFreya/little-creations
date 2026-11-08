@@ -27,21 +27,36 @@ a:focus-visible { outline: 3px dashed #fff7db; outline-offset: 9px; }
 }
 @media (prefers-reduced-motion: reduce) { .work, .github { transition: none; } }
 
-.works { display:flex; gap:32px; width:min(56vw,680px); align-items:center; }
-.works .work { width:calc(50% - 16px); flex-shrink:0; }
-.flower-work { transform:rotate(-5deg); }
-.flower-work:hover { transform:rotate(-1deg) translateY(-5px); }
-@media(max-width:650px){.works{width:76%;right:9%;gap:18px;bottom:10%}.works .work{width:calc(50% - 9px)}.work{padding:6px 6px 27px}.tape{height:18px;top:-9px}}
+/* Each small creation remains a separate, clickable paper card. */
+.works {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  width: min(88vw, 1180px);
+  right: 6%;
+}
+.flower-work { transform: rotate(-5deg); }
+.flower-work:hover { transform: rotate(-1deg) translateY(-5px); }
+.window-work { transform: rotate(3deg); }
+.window-work > img { object-position: 50% 45%; }
+.stamp-work { transform: rotate(-3deg); }
+.stamp-work > img { background: #afa4b9; }
+@media (max-width: 650px) {
+  .works {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 72%;
+    right: 9%;
+    bottom: 7%;
+    gap: 24px 18px;
+  }
+  .work { padding: 6px 6px 25px; }
+  .tape { height: 18px; top: -9px; }
+  .open { right: 7px; }
+}
 
-.works { width:min(69vw,900px); gap:24px; }
-.works .work { width:calc((100% - 48px)/3); }
-.window-work { transform:rotate(3deg); }
-.window-work > img { object-position:50% 45%; }
-@media(max-width:650px){.works{width:86%;right:7%;gap:11px;bottom:10%}.works .work{width:calc((100% - 22px)/3)}.works .work{padding:4px 4px 23px}.works .open{right:5px}.works .tape{height:14px;top:-7px}}
-
-/* Four creations keep their postcard size; small screens use two rows. */
-.works { width:min(78vw,1080px); gap:22px; }
-.works .work { width:calc((100% - 66px)/4); }
-.ballet-work { transform:rotate(-3deg); }
-.ballet-work:hover { transform:rotate(0deg) translateY(-5px); }
-@media(max-width:650px){.works{flex-wrap:wrap;width:72%;right:8%;gap:22px 16px;bottom:8%}.works .work{width:calc((100% - 16px)/2)}.handwriting-space{height:20%}}
+.ballet-work { transform: rotate(-3deg); }
+.ballet-work:hover { transform: rotate(0deg) translateY(-5px); }
+@media (max-width: 650px) {
+  .handwriting-space { height: 20%; }
+  .works .work:last-child { grid-column: 1 / -1; width: calc(50% - 9px); justify-self: center; }
+}

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f1ed">
+  <meta name="description" content="一枚会随手势泛起金光的植物邮票。">
+  <title>鎏金花邮 · 灵感小作</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="../" aria-label="返回灵感小作">← <span>灵感小作</span></a>
+    <span class="edition">BOTANICAL POST / Nº 005</span>
+  </header>
+  <main>
+    <div class="gallery" id="gallery">
+      <div class="stamp" id="stamp" tabindex="0" aria-label="互动植物邮票，移动鼠标或手指查看金箔反光，也可按方向键调整角度">
+        <svg id="artwork" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 630" role="img" aria-label="浅紫色金箔植物邮票"></svg>
+      </div>
+    </div>
+    <fieldset class="palette" aria-label="选择邮票款式">
+      <legend class="sr-only">邮票款式</legend>
+      <label class="swatch" style="--color:#b4a9c2"><input type="radio" name="variant" value="lilac" checked aria-label="雾紫，24 cents"><span></span></label>
+      <label class="swatch" style="--color:#293e80"><input type="radio" name="variant" value="indigo" aria-label="靛蓝，36 cents"><span></span></label>
+      <label class="swatch" style="--color:#292824"><input type="radio" name="variant" value="charcoal" aria-label="墨黑，50 cents"><span></span></label>
+      <label class="swatch" style="--color:#ac8e42"><input type="radio" name="variant" value="ochre" aria-label="赭金，80 cents"><span></span></label>
+    </fieldset>
+    <p class="hint" id="hint" aria-live="polite">移动光线，拾起一片金色。</p>
+  </main>
+  <footer><span>鎏金花邮</span><span>MOVE SLOWLY · CATCH THE LIGHT</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

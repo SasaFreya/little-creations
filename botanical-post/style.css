@@ -1,0 +1,35 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; }
+body { margin: 0; background: #f3f1ed; color: #797770; font-family: system-ui, -apple-system, sans-serif; }
+header { height: 76px; margin: 0 4.5%; display: flex; align-items: center; justify-content: space-between; }
+header a { color: #6e7068; text-decoration: none; font-size: 19px; }
+header a span { margin-left: 12px; font-size: 10px; letter-spacing: 1px; }
+.edition { font-size: 8px; letter-spacing: 2px; color: #a2a096; }
+main { display: flex; flex-direction: column; align-items: center; }
+.gallery { width: 100%; height: min(72svh, 760px); min-height: 360px; display: grid; place-items: center; perspective: 1400px; padding: 35px 8%; }
+.stamp { width: min(76vw, 780px, calc(102svh - 100px)); aspect-ratio: 10 / 7; transform-style: preserve-3d; will-change: transform; cursor: grab; touch-action: none; filter: drop-shadow(2px 13px 12px #29211d2b) drop-shadow(0 2px 2px #463f3420); }
+.stamp.portrait { width: min(43vw, 385px, 44svh); aspect-ratio: 5 / 7; }
+.stamp svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.stamp:active { cursor: grabbing; }
+.stamp:focus-visible { outline: 1px dashed #9b8c6c; outline-offset: 18px; }
+.palette { border: 0; padding: 0; display: flex; align-items: center; gap: 28px; margin: 18px 0 0; }
+.swatch { position: relative; width: 34px; height: 34px; display: grid; place-items: center; cursor: pointer; }
+.swatch input { position: absolute; inset: 0; opacity: 0; margin: 0; width: 100%; height: 100%; cursor: pointer; }
+.swatch span { display: block; width: 25px; height: 25px; border-radius: 50%; background: var(--color); pointer-events: none; box-shadow: inset 0 0 0 1px #0000000a; }
+.swatch input:checked + span { outline: 1px solid #8f8a80; outline-offset: 5px; }
+.swatch input:focus-visible + span { outline: 2px solid #655e50; outline-offset: 5px; }
+.hint { font-size: 10px; letter-spacing: 2px; color: #aaa69b; margin: 25px 0 0; }
+footer { max-width: 1400px; margin: 28px auto 0; padding: 0 4.5% 25px; display: flex; justify-content: space-between; font-size: 8px; letter-spacing: 2px; color: #a4a095; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media(max-width:600px) {
+  header { height: 60px; }
+  .edition { font-size: 6px; letter-spacing: 1px; }
+  .gallery { height: 66svh; min-height: 310px; padding: 30px 6%; perspective: 1000px; }
+  .stamp { width: min(88vw, calc(94svh - 86px)); }
+  .stamp.portrait { width: min(68vw, 39svh); }
+  .palette { gap: 22px; margin-top: 8px; }
+  .hint { font-size: 8px; letter-spacing: 1px; }
+  footer { margin-top: 35px; }
+  footer span:last-child { font-size: 6px; letter-spacing: 1px; }
+}
+@media(prefers-reduced-motion:reduce) { .stamp { will-change: auto; } }
