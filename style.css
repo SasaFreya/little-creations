@@ -8,7 +8,7 @@ body { background: #6490c5; }
 .github:hover { opacity: 1; }
 svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
 .works { position: absolute; right: 10%; bottom: 12%; width: clamp(185px, 25vw, 340px); }
-.work { display: block; position: relative; padding: 10px; background: #eee9dc; box-shadow: 2px 8px 17px #18375b30; transform: rotate(5deg); transition: transform .3s, box-shadow .3s; }
+.work { display: block; position: relative; text-decoration: none; padding: 10px; background: #eee9dc; box-shadow: 2px 8px 17px #18375b30; transform: rotate(5deg); transition: transform .3s, box-shadow .3s; }
 .work > img { display: block; width: 100%; aspect-ratio: 1.5; object-fit: cover; }
 .work:hover { transform: rotate(1deg) translateY(-5px); box-shadow: 3px 15px 25px #18375b40; }
 .tape { position: absolute; width: 32%; height: 27px; left: 34%; top: -13px; background: #e5e4cead; transform: rotate(-7deg); clip-path: polygon(2% 0,98% 3%,100% 95%,0 100%); z-index: 1; }
